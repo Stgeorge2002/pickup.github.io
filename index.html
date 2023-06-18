@@ -9,7 +9,7 @@
     <div id="map" style="width: 100%; height: 600px;"></div>
     <script>
         // Initialize the map
-        var map = L.map('map').setView([51.912284, -2.034672], 14);
+        var map = L.map('map').setView([51.912284, -2.034672], 8); // Adjusted zoom level
 
         // Add a base layer (you can use any tile provider)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -23,7 +23,6 @@
         L.control.zoom({
              position:'topright'
         }).addTo(map);
-
     </script>
 </body>
 </html>
