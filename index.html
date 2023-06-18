@@ -11,9 +11,12 @@
         }
         .pickup-location {
             position: relative;
-            top: -70px;
+            top: -90px;  // Adjust this value to move the text higher
             font-size: 24px;
             font-weight: bold;
+            width: 200px;
+            text-align: center;
+            left: -75px;
         }
     </style>
 </head>
@@ -21,7 +24,7 @@
     <div id="map" style="width: 100%; height: 600px;"></div>
     <script>
         // Initialize the map
-        var map = L.map('map').setView([51.912284, -2.034672], 7); // Adjusted zoom level
+        var map = L.map('map').setView([51.912284, -2.034672], 13); // Adjusted zoom level
 
         // Add a base layer (you can use any tile provider)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
