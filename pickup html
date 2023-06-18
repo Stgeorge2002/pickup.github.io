@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map" style="width: 100%; height: 600px;"></div>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([51.912284, -2.034672], 14);
+
+        // Add a base layer (you can use any tile provider)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add a marker for the postcode GL52 8
+        var marker = L.marker([51.912284, -2.034672], {icon: L.divIcon({className: 'icon-red'})}).addTo(map);
+
+        // Add zoom control
+        L.control.zoom({
+             position:'topright'
+        }).addTo(map);
+
+    </script>
+</body>
+</html>
